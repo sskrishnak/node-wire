@@ -34,7 +34,7 @@ Node Wire is a Python framework that runs connector adapters (Google Drive, SMTP
 ```bash
 # 1. Clone the repository
 git clone <repo-url>
-cd connector-platform
+cd node-wire
 
 # 2. Install the platform with all optional agent dependencies
 pip install -e ".[agents]"

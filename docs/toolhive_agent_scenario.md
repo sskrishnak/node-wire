@@ -121,7 +121,7 @@ Below is the full set of environment variables used by the connector platform an
 | `GROQ_API_KEY` | LLM (Groq) | Your Groq API key |
 | `GROQ_MODEL` | LLM | Example: `openai/gpt-oss-120b` |
 | `MCP_TRANSPORT` | ToolHive / local | `stdio` when running in ToolHive container |
-| `PYTHONPATH` | Runtime | e.g. `/app/src` for container; `d:\connector-platform\src` locally |
+| `PYTHONPATH` | Runtime | e.g. `/app/src` for container; `/path/to/node-wire/src` (macOS/Linux) or `C:\path\to\node-wire\src` (Windows) locally |
 | `SMTP_HOST` | SMTP connector | Example: `sandbox.smtp.mailtrap.io` |
 | `SMTP_PORT` | SMTP connector | Example: `2525` |
 | `SMTP_USERNAME` | SMTP connector | Mailtrap / SMTP user |
@@ -190,7 +190,7 @@ Notes for non-developers:
 From the root of the repository:
 
 ```bash
-cd connector-platform
+cd node-wire
 
 docker build -t node-wire:latest .
 ```
@@ -524,7 +524,7 @@ tests/test_toolhive_agent.py::test_mcp_entrypoint_registers_three_to PASSED
 ## File layout (`agents`)
 
 ```
-connector-platform/
+node-wire/
 ├── Dockerfile                              ← Docker image for ToolHive
 ├── pyproject.toml                          ← [agents] extras added
 ├── sample.env                              ← env var reference
